@@ -35,7 +35,7 @@
                     الاسم بالكامل <span class="text-red-400">*</span>
                 </label>
                 <div class="relative">
-                    <input type="text" id="fullName" name="fullName" autocomplete="off" required placeholder="أدخل اسمك الثلاثي أو الرباعي"
+                    <input type="text" id="fullName" name="fullName" autocomplete="off" required placeholder=" اسمك الرباعي"
                            class="w-full pr-10 pl-4 py-3 rounded-2xl border border-sky-200 bg-sky-50/30 focus:bg-white focus:ring-2 focus:ring-sky-400 focus:border-sky-400 text-slate-700 text-sm transition">
                     <i class="fa-solid fa-user absolute right-3.5 top-3.5 text-sky-400"></i>
                 </div>
@@ -44,7 +44,7 @@
             <!-- رقم التليفون -->
             <div>
                 <label for="phoneNumber" class="block text-sm font-bold text-sky-950 mb-2">
-                    رقم التليفون (واتساب) <span class="text-red-400">*</span>
+                    رقم التليفون  <span class="text-red-400">*</span>
                 </label>
                 <div class="relative">
                     <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="off" required placeholder="01XXXXXXXXX" dir="ltr"
@@ -56,7 +56,7 @@
             <!-- الرقم القومي -->
             <div>
                 <label for="nationalId" class="block text-sm font-bold text-sky-950 mb-2">
-                    الرقم القومي (14 رقم) <span class="text-red-400">*</span>
+                    الرقم القومي  <span class="text-red-400">*</span>
                 </label>
                 <div class="relative">
                     <input type="text" id="nationalId" name="nationalId" autocomplete="off" required maxlength="14" dir="ltr" placeholder="أدخل 14 رقم قومي"
@@ -105,13 +105,12 @@
 
             <hr class="border-sky-100 my-6">
 
-            <!-- مجالات المشاركة -->
-            <div>
-                <label class="block text-sm font-bold text-sky-950 mb-1">
-                    تشارك في إيه في القافلة؟ <span class="text-red-400">*</span>
-                </label>
-                <p class="text-xs text-sky-600/80 mb-3">اختر مجالاً واحداً فقط</p>
-                <div class="grid grid-cols-2 gap-3">
+           <!-- مجالات المشاركة -->
+<div>
+    <label class="block text-sm font-bold text-sky-950 mb-3">
+        تشارك في إيه في القافلة؟ <span class="text-red-400">*</span>
+    </label>
+    <div class="grid grid-cols-2 gap-3">
                     <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50/50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50">
                         <input type="radio" name="role" value="استقبال" required class="w-4 h-4 text-sky-600 focus:ring-sky-400">
                         <span class="mr-2.5 text-sm font-bold text-sky-900">استقبال</span>
