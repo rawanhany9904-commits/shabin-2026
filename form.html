@@ -25,12 +25,12 @@
             <!-- الشعار -->
             <img src="logo.png" alt="صناع الحياة المنوفية" class="h-20 sm:h-24 mx-auto object-contain">
             
-            <div class="pt-2 space-y-1">
-    <!-- العنوان الرئيسي خط كبير -->
-    <h1 class="text-2xl sm:text-3xl font-extrabold text-sky-950 tracking-wide">
-        قافلة مليج 2026 🌟
+           <div class="pt-2 space-y-1">
+    <!-- العنوان الرئيسي بخط كبير ولون كحلي داكن بسيط وأنيق -->
+    <h1 class="text-2xl sm:text-3xl font-bold text-sky-950 tracking-wide">
+        قافلة مليج 7/8 ✨
     </h1>
-    <!-- العنوان الفرعي خط متوسط -->
+    <!-- العنوان الفرعي بخط متوسط ولون أزرق فاتح -->
     <p class="text-sky-600 text-base sm:text-lg font-bold">
         استمارة تسجيل المتطوعين
     </p>
@@ -164,23 +164,10 @@
 
             <hr class="border-sky-100 my-6">
 
-            <!-- كارت الواتساب -->
-            <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-5 text-center shadow-sm space-y-3">
-                <div class="flex items-center justify-center gap-2 text-emerald-800 font-bold text-sm">
-                    <i class="fa-brands fa-whatsapp text-xl text-emerald-600"></i>
-                    <span>آخر خطوة قبل إرسال الاستمارة!</span>
-                </div>
-                <p class="text-xs text-emerald-700 font-medium">
-                    متنساش تؤكد حضورك بدخول جروب القافلة عبر الرابط التالي:
-                </p>
-                <a href="https://chat.whatsapp.com/IkHg5LmGjxv1JOk77usVyF?s=cl&p=a&ilr=1" 
-                   target="_blank"
-                   class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition shadow-sm">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    الدخول لجروب الواتساب الآن
-                </a>
-            </div>
-
+        <!-- تنبيه بسيط قبل الإرسال -->
+<p class="text-xs text-center text-sky-600/80 font-semibold mb-3">
+    * عند الضغط على إرسال سيظهر لك رابط جروب الواتساب للانضمام 🌟
+</p>
             <!-- زر الإرسال -->
             <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-sky-200 transition duration-200 text-base flex items-center justify-center gap-2">
                 <i class="fa-solid fa-paper-plane"></i>
@@ -188,24 +175,42 @@
             </button>
         </form>
     </div>
-
-    <!-- نافذة نجاح الإرسال -->
-    <div id="successModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-3xl p-7 max-w-sm w-full text-center shadow-2xl space-y-4">
-            <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto text-3xl">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <h2 class="text-xl font-bold text-sky-950">تم الإرسال بنجاح! 🎉</h2>
-            <p class="text-sm text-slate-700 leading-relaxed font-semibold">
-                نتمنى إنه يكون يوم لذيذ وتجربة لذيذة عليك وتسيب أثر طيب 🤍
-            </p>
-            <button onclick="document.getElementById('successModal').classList.add('hidden')"
-                    class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-2.5 rounded-xl text-xs transition">
-                إغلاق
-            </button>
+<!-- نافذة نجاح الإرسال وبها رابط الجروب -->
+<div id="successModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-sm w-full text-center shadow-2xl space-y-4 border border-sky-100">
+        
+        <!-- أيقونة النجاح -->
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+            <i class="fa-solid fa-circle-check"></i>
         </div>
-    </div>
 
+        <!-- رسالة النجاح -->
+        <h2 class="text-xl font-extrabold text-sky-950">تم إرسال بياناتك بنجاح! 🎉</h2>
+        <p class="text-xs text-slate-600 leading-relaxed font-semibold">
+            نتمنى إنه يكون يوم لذيذ وتجربة لذيذة عليك وتسيب أثر طيب 🤍
+        </p>
+
+        <!-- كارت انضمام الواتساب (يظهر الآن فقط) -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 space-y-3 mt-2">
+            <p class="text-xs text-emerald-800 font-bold">
+                خطوة أخيرة أسبوعية مهمة جداً! 👇
+            </p>
+            <a href="https://chat.whatsapp.com/IkHg5LmGjxv1JOk77usVyF?s=cl&p=a&ilr=1" 
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition shadow-md shadow-emerald-200">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>انضم لجروب القافلة على الواتساب</span>
+            </a>
+        </div>
+
+        <!-- زر إغلاق النافذة -->
+        <button onclick="document.getElementById('successModal').classList.add('hidden')"
+                class="w-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-2 rounded-xl text-xs transition mt-2">
+            إغلاق
+        </button>
+
+    </div>
+</div>
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwmaMkSonVcBbzUX5Zb7ADrPS9bohhOSFpCvOVR84y-tiLARedNTIO0-i0nEFDGutedWw/exec"; 
         let fileBase64 = null;
