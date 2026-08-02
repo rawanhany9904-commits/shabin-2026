@@ -16,14 +16,19 @@
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+<body class="bg-gradient-to-br from-sky-100 via-blue-50 to-orange-50 text-slate-800 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
 
-    <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-sky-100">
+    <div class="max-w-xl mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-sky-100">
         
-        <!-- الهيدر -->
-        <div class="bg-gradient-to-r from-sky-600 to-blue-700 p-6 text-center text-white space-y-2">
-            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-wide">استمارة تسجيل المتطوعين</h1>
-            <p class="text-sky-100 text-sm font-medium">قافلة مليج 2026 🌟</p>
+        <!-- الهيدر مع صورة الشعار -->
+        <div class="bg-white p-6 text-center border-b border-sky-100 space-y-3">
+            <!-- الشعار -->
+            <img src="logo.png" alt="صناع الحياة المنوفية" class="h-20 sm:h-24 mx-auto object-contain">
+            
+            <div class="pt-2">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-sky-950 tracking-wide">استمارة تسجيل المتطوعين</h1>
+                <p class="text-sky-600 text-sm font-semibold mt-1">قافلة مليج 2026 🌟</p>
+            </div>
         </div>
 
         <!-- الاستمارة -->
@@ -36,7 +41,7 @@
                 </label>
                 <div class="relative">
                     <input type="text" id="fullName" name="fullName" autocomplete="off" required placeholder=" اسمك الرباعي"
-                           class="w-full pr-10 pl-4 py-3 rounded-2xl border border-sky-200 bg-sky-50/30 focus:bg-white focus:ring-2 focus:ring-sky-400 focus:border-sky-400 text-slate-700 text-sm transition">
+                           class="w-full pr-10 pl-4 py-3 rounded-2xl border border-sky-200 bg-sky-50/40 focus:bg-white focus:ring-2 focus:ring-sky-400 focus:border-sky-400 text-slate-700 text-sm transition">
                     <i class="fa-solid fa-user absolute right-3.5 top-3.5 text-sky-400"></i>
                 </div>
             </div>
@@ -48,12 +53,12 @@
                 </label>
                 <div class="relative">
                     <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="off" required placeholder="01XXXXXXXXX" dir="ltr"
-                           class="w-full text-right pr-10 pl-4 py-3 rounded-2xl border border-sky-200 bg-sky-50/30 focus:bg-white focus:ring-2 focus:ring-sky-400 focus:border-sky-400 text-slate-700 text-sm transition">
+                           class="w-full text-right pr-10 pl-4 py-3 rounded-2xl border border-sky-200 bg-sky-50/40 focus:bg-white focus:ring-2 focus:ring-sky-400 focus:border-sky-400 text-slate-700 text-sm transition">
                     <i class="fa-solid fa-phone absolute right-3.5 top-3.5 text-sky-400"></i>
                 </div>
             </div>
 
-          <!-- الرقم القومي -->
+            <!-- الرقم القومي -->
             <div>
                 <label for="nationalId" class="block text-sm font-bold text-sky-950 mb-1">
                     الرقم القومي <span class="text-red-400">*</span>
@@ -72,35 +77,34 @@
             </div>
 
             <hr class="border-sky-100 my-6">
-
-<!-- السؤال الأول: المجال الطبي -->
+            <!-- السؤال الأول: المجال الطبي -->
             <div>
                 <label class="block text-sm font-bold text-sky-950 mb-3">
                     هل أنت في المجال الطبي؟ <span class="text-red-400">*</span>
                 </label>
                 <div class="grid grid-cols-2 gap-3">
-                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80 has-[:checked]:text-sky-900">
                         <input type="radio" name="isMedical" value="yes" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">نعم</span>
                     </label>
-                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80 has-[:checked]:text-sky-900">
                         <input type="radio" name="isMedical" value="no" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">لا</span>
                     </label>
                 </div>
             </div>
 
-            <!-- السؤال الثاني: قياس الضغط والسكر (ظاهر للجميع الآن) -->
+            <!-- السؤال الثاني: قياس الضغط والسكر (ظاهر للجميع) -->
             <div>
                 <label class="block text-sm font-bold text-sky-950 mb-3">
                     بتعرف تقيس ضغط وسكر؟ <span class="text-red-400">*</span>
                 </label>
                 <div class="grid grid-cols-2 gap-3">
-                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80 has-[:checked]:text-sky-900">
                         <input type="radio" name="canMeasure" value="yes" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">نعم</span>
                     </label>
-                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80 has-[:checked]:text-sky-900">
                         <input type="radio" name="canMeasure" value="no" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">لا</span>
                     </label>
@@ -109,25 +113,25 @@
 
             <hr class="border-sky-100 my-6">
 
-           <!-- مجالات المشاركة -->
-<div>
-    <label class="block text-sm font-bold text-sky-950 mb-3">
-        تشارك في إيه في القافلة؟ <span class="text-red-400">*</span>
-    </label>
-    <div class="grid grid-cols-2 gap-3">
-                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50/50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50">
+            <!-- مجالات المشاركة -->
+            <div>
+                <label class="block text-sm font-bold text-sky-950 mb-3">
+                    تشارك في إيه في القافلة؟ <span class="text-red-400">*</span>
+                </label>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80">
                         <input type="radio" name="role" value="استقبال" required class="w-4 h-4 text-sky-600 focus:ring-sky-400">
                         <span class="mr-2.5 text-sm font-bold text-sky-900">استقبال</span>
                     </label>
-                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50/50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50">
+                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80">
                         <input type="radio" name="role" value="تنظيم" required class="w-4 h-4 text-sky-600 focus:ring-sky-400">
                         <span class="mr-2.5 text-sm font-bold text-sky-900">تنظيم</span>
                     </label>
-                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50/50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50">
+                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80">
                         <input type="radio" name="role" value="توعية" required class="w-4 h-4 text-sky-600 focus:ring-sky-400">
                         <span class="mr-2.5 text-sm font-bold text-sky-900">توعية</span>
                     </label>
-                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50/50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50">
+                    <label class="flex items-center p-3 border border-sky-200 rounded-2xl cursor-pointer bg-sky-50/30 hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/80">
                         <input type="radio" name="role" value="معرض" required class="w-4 h-4 text-sky-600 focus:ring-sky-400">
                         <span class="mr-2.5 text-sm font-bold text-sky-900">معرض</span>
                     </label>
@@ -140,7 +144,7 @@
                     ارفع صورة البطاقة (وجه وظهر) <span class="text-red-400">*</span>
                 </label>
                 <p class="text-xs text-sky-600/80 mb-2">الملف يجب أن يكون بصيغة PDF</p>
-                <div class="p-5 border-2 border-sky-200 border-dashed rounded-2xl bg-sky-50/40 hover:bg-sky-50 transition text-center">
+                <div class="p-5 border-2 border-sky-200 border-dashed rounded-2xl bg-sky-50/30 hover:bg-sky-50 transition text-center">
                     <i class="fa-solid fa-file-pdf text-3xl text-sky-500 mb-2"></i>
                     <div class="text-xs text-sky-800 font-medium">
                         <label for="pdfUpload" class="cursor-pointer text-sky-600 font-bold hover:underline">
@@ -155,7 +159,7 @@
             <hr class="border-sky-100 my-6">
 
             <!-- كارت الواتساب -->
-            <div class="bg-emerald-50/70 border border-emerald-200/90 rounded-2xl p-5 text-center shadow-sm space-y-3">
+            <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-5 text-center shadow-sm space-y-3">
                 <div class="flex items-center justify-center gap-2 text-emerald-800 font-bold text-sm">
                     <i class="fa-brands fa-whatsapp text-xl text-emerald-600"></i>
                     <span>آخر خطوة قبل إرسال الاستمارة!</span>
@@ -179,7 +183,7 @@
         </form>
     </div>
 
-    <!-- نافذة نجاح الإرسال (تم تحديث الرسالة هنا) -->
+    <!-- نافذة نجاح الإرسال -->
     <div id="successModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-3xl p-7 max-w-sm w-full text-center shadow-2xl space-y-4">
             <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto text-3xl">
