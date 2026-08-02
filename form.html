@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>استمارة تسجيل المتطوعين - قافلة شبين 2026</title>
+    <title>استمارة تسجيل المتطوعين - قافلة مليج 2026</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome icons -->
@@ -23,7 +23,7 @@
         <!-- الهيدر -->
         <div class="bg-gradient-to-r from-sky-600 to-blue-700 p-6 text-center text-white space-y-2">
             <h1 class="text-2xl sm:text-3xl font-extrabold tracking-wide">استمارة تسجيل المتطوعين</h1>
-            <p class="text-sky-100 text-sm font-medium">قافلة شبين 2026 🌟</p>
+            <p class="text-sky-100 text-sm font-medium">قافلة مليج 2026 🌟</p>
         </div>
 
         <!-- الاستمارة -->
@@ -73,36 +73,36 @@
 
             <hr class="border-sky-100 my-6">
 
-            <!-- السؤال الطبي الشرطي -->
+<!-- السؤال الأول: المجال الطبي -->
             <div>
                 <label class="block text-sm font-bold text-sky-950 mb-3">
                     هل أنت في المجال الطبي؟ <span class="text-red-400">*</span>
                 </label>
                 <div class="grid grid-cols-2 gap-3">
                     <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
-                        <input type="radio" name="isMedical" value="yes" required onchange="toggleMedicalSection(true)" class="hidden">
+                        <input type="radio" name="isMedical" value="yes" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">نعم</span>
                     </label>
                     <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
-                        <input type="radio" name="isMedical" value="no" required onchange="toggleMedicalSection(false)" class="hidden">
+                        <input type="radio" name="isMedical" value="no" required class="hidden">
                         <span class="font-bold text-sm text-sky-900">لا</span>
                     </label>
                 </div>
             </div>
 
-            <!-- السؤال الفرعي (يظهر فقط إذا كان الإجابة نعم) -->
-            <div id="medicalSection" class="hidden p-4 bg-sky-50/80 rounded-2xl border border-sky-200/80 transition-all duration-300">
-                <label class="block text-sm font-bold text-sky-900 mb-3">
+            <!-- السؤال الثاني: قياس الضغط والسكر (ظاهر للجميع الآن) -->
+            <div>
+                <label class="block text-sm font-bold text-sky-950 mb-3">
                     بتعرف تقيس ضغط وسكر؟ <span class="text-red-400">*</span>
                 </label>
                 <div class="grid grid-cols-2 gap-3">
-                    <label class="flex items-center justify-center p-2.5 bg-white border border-sky-200 rounded-xl cursor-pointer hover:border-sky-400 transition has-[:checked]:bg-sky-500 has-[:checked]:text-white">
-                        <input type="radio" name="canMeasure" value="yes" class="hidden">
-                        <span class="font-bold text-sm">نعم</span>
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                        <input type="radio" name="canMeasure" value="yes" required class="hidden">
+                        <span class="font-bold text-sm text-sky-900">نعم</span>
                     </label>
-                    <label class="flex items-center justify-center p-2.5 bg-white border border-sky-200 rounded-xl cursor-pointer hover:border-sky-400 transition has-[:checked]:bg-sky-500 has-[:checked]:text-white">
-                        <input type="radio" name="canMeasure" value="no" class="hidden">
-                        <span class="font-bold text-sm">لا</span>
+                    <label class="flex items-center justify-center p-3 border border-sky-200 rounded-2xl cursor-pointer hover:bg-sky-50 transition has-[:checked]:border-sky-500 has-[:checked]:bg-sky-100/70 has-[:checked]:text-sky-900">
+                        <input type="radio" name="canMeasure" value="no" required class="hidden">
+                        <span class="font-bold text-sm text-sky-900">لا</span>
                     </label>
                 </div>
             </div>
@@ -201,22 +201,6 @@
         let fileBase64 = null;
         let fileNameVal = "";
 
-        function toggleMedicalSection(show) {
-            const medicalSection = document.getElementById('medicalSection');
-            const canMeasureInputs = document.querySelectorAll('input[name="canMeasure"]');
-            
-            if (show) {
-                medicalSection.classList.remove('hidden');
-                canMeasureInputs.forEach(i => i.required = true);
-            } else {
-                medicalSection.classList.add('hidden');
-                canMeasureInputs.forEach(i => {
-                    i.required = false;
-                    i.checked = false;
-                });
-            }
-        }
-
         function validateNationalId(input) {
             const idError = document.getElementById('idError');
             input.value = input.value.replace(/[^0-9]/g, '');
@@ -295,7 +279,6 @@
 
                 document.getElementById('successModal').classList.remove('hidden');
                 document.getElementById('volunteerForm').reset();
-                document.getElementById('medicalSection').classList.add('hidden');
                 document.getElementById('fileName').innerText = 'الحد الأقصى 10 ميجابايت';
                 document.getElementById('fileName').classList.remove('text-sky-600', 'font-bold');
                 fileBase64 = null;
